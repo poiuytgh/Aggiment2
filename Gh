@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table,th,td{
+            border: 1px solid black;
+        }
+        td{
+            padding-top: 50px;
+            padding-bottom: 50px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body onload="getdata()">
+    <table  style="width: 100%" id="Table">
+        <tr style="background-color: lightblue;">
+            <th>Image</th>
+            <th>Title</th>
+            <th>description</th>
+            <th>ReleaseDate</th>
+            
+        </tr>
+        <tbody class="tbody">       
+        </tbody>    
+    </table>
+    <script>
+        async function getdata(){
+            let response = await fetch('https://ghibliapi.vercel.app/films/');
+            let data =await response.json();
+            let Userinfo =document.querySelector(".tbody");
+            console.log(data)
+        
+            data.forEach(element => {
+            const {image,title,description,release_date}=element;
+            let newFow=
+            `
+            <tr>
+            <td><img src="${image}" ></td>
+            <td>${title }</td>
+            <td>${description }</td>
+            <td>${release_date }</td>
+            
+            </tr>            
+            ` 
+            Userinfo.innerHTML += newFow
+        });
+        } 
+    </script>
+</body>
+</html>
