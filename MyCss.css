@@ -1,51 +1,241 @@
 body {
-    margin: 0;
-    font-family:Arial, Helvetica, sans-serif;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  padding: 10px;
 }
 
-.container {
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 30px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid rgb(111, 110, 110);
+  width: 100%;
+
+  gap: 40px;
+}
+
+header .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150%;
+  height: 150%;
+  margin: auto;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid black;
+}
+
+header .logo h1 img {
+  width: 50%;
+}
+
+header .icons img {
+  width: 30px;
+  
+}
+
+header .logo {
+  display: flex;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .icons {
+  display: flex;
+  gap: 45px;
+}
+
+.title {
+  display: flex;
+  font-size: 30px;
+  font-weight: 900;
+  color: #000000;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: 50px;
+  height: auto;
+}
+
+.button1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  font-weight: 900;
+  color: #000000;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.yellow {
+  background: #FCF6C5;
+}
+
+.green {
+  background: #98E6B2;
+}
+
+.line {
+  position: absolute;
+  margin-top: 100px;
+  width: 100%;
+  border: 1px solid #BCADAD;
+}
+
+.head {
+  position: relative;
+  width: 1440px;
+  height: 102px;
+  left: 10px;
+  top: 5px;
+}
+
+
+  
+.group {
+    width: 1200px;
+    margin-bottom: 100px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+
+}
+  
+.profile {
+    display: flex;
+    align-items: center;
+}
+  
+.profile img {
+    width: 188px;
+    height: 188px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+  
+.info {
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+}
+
+.container1 {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    margin-top: 50px;
+    height: 400px;
+    top: 338px;
+    margin-left: 1200px;
 }
-
+  
 .box {
-    width: 1000px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    gap: 10px;
+    width: 40px;
+    height: 38px;
+    border: 2px solid #BCADAD;
+    border-radius: 10px;
+}
+  
+.arrow {
+    width: 16px;
+    height: 30px;
+    font-family: 'JejuGothic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 30px;
+    color:#BCADAD;
+}
+  
+.page {
+    width: 85px;
+    height: 30px;
+    font-family: 'JejuGothic';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 30px;
+    color: #000000;
+}
+  
+.rotated {
+    transform: rotate(-180deg);
+    border-color: #262626;
+}
+  
+.arrow.rotated {
+    color: #262626;
 }
 
-#header-box {
-    height: 100px;
-    background-color: pink;
-    font-weight: bold;
-    font-size:200%;
+.box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4px;
+  gap: 100px;
+  width: 100px;
+  height: 38px;
+  border: 2px solid #BCADAD;
+  border-radius: 10px;
 }
 
-#nav-box {
-    height: 50px;
-    background-color: purple;
-    color: white;
-    margin-top: 0px;
-    font-size:110%;
+.footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0;
+  gap: 10px;
+  width: 185px;
+  height: 38px;
+  position: absolute;
+  left: 628px;
+  bottom: 20px;
 }
 
-#content-box {
-    height: 550px;
-    background-color: gray;
-    color: white;
-    margin-top: 0px;
-    text-align: left;
-    padding-left: 10px;
-    border: 0px solid white;
-    box-sizing: border-box;
+.pagination-2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position:relative;
+  top: 100px;
+  left: 600px;
 }
 
-#footer-box {
-    height: 50px;
-    background-color: rgb(184, 114, 224);
-    align-self: center;
-    margin-top: 0px;
-    font-weight: bold;
-    font-size: 15px;
+.prev {
+  border:2px solid #000000; 
+  color:#000000; 
+}
+
+.next {
+  border:2px solid #000000; 
+  color:#000000;
+}
+
+.page-number {
+  font-family: 'JejuGothic';
+  font-size: 28px;
 }
